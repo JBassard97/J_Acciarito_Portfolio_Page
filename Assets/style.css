@@ -1,8 +1,10 @@
 /* Establishing variables used throughout similarly styled items */
 :root {
+    --sunset: #ac8132;
     --darkTeal: rgb(6, 55, 61);
     --lightTeal: rgb(56, 177, 177);
-    --tealGradient: linear-gradient(to top, var(--lightTeal), var(--darkTeal));
+    --lighterTeal: rgb(109, 175, 175);
+    --tealGradient: linear-gradient(to top, var(--lighterTeal), var(--lightTeal), var(--darkTeal));
 }
 
 /* Makes all elements predictably sized, across multiple browsers */
@@ -57,6 +59,7 @@ li a {
     /* Positioning */
     display: inline-block;
     justify-self: space-around;
+    margin-top: 2px;
     margin-right: 15px;
     border-bottom-color: var(--lightTeal);
 }
@@ -67,13 +70,29 @@ li a:hover {
     background: var(--tealGradient);
     color: var(--darkTeal);
     transform: translateY(-2px);
-    transition: color 0.5s ease-out;
+    transition: color 1s ease-out;
     cursor: help;
+    z-index: 1;
+    font-size: +100;
+}
+
+/* This section encompasses the large image and subtitle within */
+section {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Image below the Header */
 #headerImage {
-    
+    min-width: 100%;
+    max-height: 300px;
+}
+
+/* Subtitle floating within the image above */
+#subtitle {
+    color: var(--sunset);
+    font-size: larger;
+    text-decoration: underline;
 }
 
 
