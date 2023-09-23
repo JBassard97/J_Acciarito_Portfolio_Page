@@ -2,6 +2,7 @@
 :root {
     --darkTeal: rgb(6, 55, 61);
     --lightTeal: rgb(56, 177, 177);
+    --tealGradient: linear-gradient(to top, var(--lightTeal), var(--darkTeal));
 }
 
 /* Makes all elements predictably sized, across multiple browsers */
@@ -10,37 +11,100 @@
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+    margin: 0;
 }
 
 /* Header */
 header {
+    /* Aesthetic~ */
     background-color: var(--darkTeal);
+    min-height: 65px;
+    /* Positioning */
     display: flex;
-    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    
 }
 
 
-/* Aesthetic styling of h1's within the header */
-header h1 {
+/* Aesthetic styling h1 in the header */
+#headerName {
+    /* Aesthetic~ */
+    font-size: 35px;
     color: var(--darkTeal);
-    background-color: var(--lightTeal);
-    justify-self: flex-start;
+    background: var(--tealGradient);
+    border-bottom-right-radius: 20px;
+    /* Positioning */
+    flex-wrap: wrap;
+    min-height: 60px;
+    padding: 10px 10px 10px 40px;
+    align-self: flex-start;
 }
 
 /* Positioning and styling unordered list of links */
-ul {
+nav ul {
     display: flex;
 }
 
 /* Styling links */
-a {
+li a {
+    /* Aesthetic~ */
+    font-size: 1.5rem;
     color: var(--lightTeal);
     text-decoration: none;
+    /* Positioning */
     display: inline-block;
+    justify-self: space-around;
+    margin-right: 15px;
+    border-bottom-color: var(--lightTeal);
+}
+
+/* Animation when hovering over the nav links */
+li a:hover {
+    border-radius: 5px;
+    background: var(--tealGradient);
+    color: var(--darkTeal);
+    transform: translateY(-2px);
+    transition: color 0.5s ease-out;
+    cursor: help;
 }
 
 /* Image below the Header */
 #headerImage {
     
+}
+
+
+
+
+
+
+
+/* Media Queries to make page responsive */
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+    body {
+        
+    }
+}
+
+/* Large smartphones */
+@media screen and (max-width: 768px) {
+    body {
+        display: block;
+    }
+}
+
+/* Small smartphones */
+@media screen and (max-width: 576px) {
+    body {
+        display: block;
+    }
+
+    li a {
+        font-size: 1rem;
+    }
 }
