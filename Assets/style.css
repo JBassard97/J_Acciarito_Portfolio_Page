@@ -1,0 +1,46 @@
+/* Establishing variables used throughout similarly styled items */
+:root {
+    --darkTeal: rgb(6, 55, 61);
+    --lightTeal: rgb(56, 177, 177);
+}
+
+/* Makes all elements predictably sized, across multiple browsers */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background-color: var(--darkTeal);
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+
+/* Aesthetic styling of h1's within the header */
+header h1 {
+    color: var(--darkTeal);
+    background-color: var(--lightTeal);
+    justify-self: flex-start;
+}
+
+/* Positioning and styling unordered list of links */
+ul {
+    display: flex;
+}
+
+/* Styling links */
+a {
+    color: var(--lightTeal);
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Image below the Header */
+#headerImage {
+    
+}
