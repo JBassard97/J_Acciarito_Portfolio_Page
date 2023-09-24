@@ -1,6 +1,6 @@
 /* Establishing variables used throughout similarly styled items */
 :root {
-    --sunset: #ac8132;
+    --sunset: rgb(172, 129, 50, 5);
     --darkTeal: rgb(6, 55, 61);
     --lightTeal: rgb(56, 177, 177);
     --lighterTeal: rgb(109, 175, 175);
@@ -76,6 +76,12 @@ li a:hover {
     font-size: +100;
 }
 
+/* Changes color of the link when clicked. Satisfying! */
+li a:active {
+    color: var(--sunset);
+    transition: none;
+}
+
 /* This section encompasses the large image and subtitle within */
 section {
     display: flex;
@@ -90,9 +96,16 @@ section {
 
 /* Subtitle floating within the image above */
 #subtitle {
+    /* Aesthetic~ */
+    background: transparent;
     color: var(--sunset);
-    font-size: larger;
-    text-decoration: underline;
+    font-size: 30px;
+    transform: rotateX(5deg);
+    opacity: 0.5;
+    /* Positioning to center of photo */
+    position: absolute;
+    align-self: center;
+    top: 220px;
 }
 
 
