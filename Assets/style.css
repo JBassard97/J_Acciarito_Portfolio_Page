@@ -55,9 +55,11 @@ nav ul {
 li a {
     /* Aesthetic~ */
     font-family: 'Oswald', Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1.6rem;
     color: var(--lightTeal);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--sunset);
     /* Positioning */
     display: inline-block;
     justify-self: space-around;
@@ -71,16 +73,22 @@ li a:hover {
     border-radius: 5px;
     background: var(--tealGradient);
     color: var(--darkTeal);
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     transition: color 1s ease-out;
     cursor: help;
+    text-decoration: none;
     
 }
 
 /* Changes color of the link when clicked. Satisfying! */
 li a:active {
     color: var(--sunset);
-    transition: none;
+    transition: linear;
+    font-weight: bolder;
+    text-shadow: 
+        0 0 1px white,
+        0 0 2px yellow,
+        0 0 3px goldenrod;
 }
 
 /* This section encompasses the large image and subtitle within */
@@ -94,6 +102,7 @@ section {
     min-width: 100%;
     max-height: 320px;
     margin-bottom: 1.2rem;
+    
 }
 
 /* Subtitle floating within the image above */
@@ -111,11 +120,43 @@ section {
     top: 220px;
 }
 
+/* Main section with Grid display */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 
+#aboutMe {
+    
+}
 
+#aboutMeContent {
 
+}
 
+#work {
 
+}
+
+#workItem1 {
+
+}
+
+#workItem2 {
+
+}
+
+#workItem3 {
+
+}
+
+#workItem4 {
+
+}
+
+#workItem5 {
+
+}
 
 /* Media Queries to make page responsive */
 
