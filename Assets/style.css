@@ -101,7 +101,7 @@ section {
 #headerImage {
     min-width: 100%;
     max-height: 320px;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     
 }
 
@@ -120,26 +120,40 @@ section {
     top: 220px;
 }
 
-/* Main section with Grid display */
+/* Main section with Grid display, establishing columns here */
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 10px;
 }
 
-#aboutMe {
+/*Setting minimum dimensions of each gridItem */
+.gridItem {
+    min-height: 200px;
     
 }
 
-#aboutMeContent {
+/* Styling section names in main similarly */
+#aboutMe,
+#work,
+#contactMe {
+    /* Aesthetic~ */
+    color: var(--darkTeal);
+    background-image: var(--tealGradient);
+}
 
+#aboutMeContent {
+    grid-column: 2 / -1;
 }
 
 #work {
-
+    grid-row: span 3;
 }
 
-#workItem1 {
-
+#workItem1,
+.bigImage {
+    grid-column: 2 / -1;
 }
 
 #workItem2 {
