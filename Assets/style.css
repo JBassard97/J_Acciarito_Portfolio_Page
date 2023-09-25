@@ -1,10 +1,15 @@
 /* Establishing variables used throughout similarly styled items */
 :root {
+    /* Colors */
     --sunset: rgb(172, 129, 50, 5);
     --darkTeal: rgb(6, 55, 61);
     --lightTeal: rgb(56, 177, 177);
     --lighterTeal: rgb(109, 175, 175);
-    --tealGradient: linear-gradient(to top, var(--lighterTeal), var(--lightTeal), var(--darkTeal));
+    --tealGradientRight: linear-gradient(to right, var(--lighterTeal), var(--lightTeal), var(--darkTeal));
+    --tealGradientTop: linear-gradient(to top, var(--lighterTeal), var(--lightTeal), var(--darkTeal));
+    /* Fonts */
+    --oswald: 'Oswald', Impact, 'Arial Narrow Bold', sans-serif;
+    --lugrasimo: 'Lugrasimo','Times New Roman', Times, serif;
 }
 
 /* Makes all elements predictably sized, across multiple browsers */
@@ -34,10 +39,10 @@ header {
 /* Aesthetic styling h1 in the header */
 #headerName {
     /* Aesthetic~ */
-    font-family: 'Oswald', Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: var(--oswald);
     font-size: 40px;
     color: var(--darkTeal);
-    background: var(--tealGradient);
+    background: var(--tealGradientTop);
     border-bottom-right-radius: 20px;
     /* Positioning */
     flex-wrap: wrap;
@@ -54,7 +59,7 @@ nav ul {
 /* Styling links */
 li a {
     /* Aesthetic~ */
-    font-family: 'Oswald', Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: var(--oswald);
     font-weight: 500;
     font-size: 1.6rem;
     color: var(--lightTeal);
@@ -71,7 +76,7 @@ li a {
 /* Animation when hovering over the nav links */
 li a:hover {
     border-radius: 5px;
-    background: var(--tealGradient);
+    background: var(--tealGradientTop);
     color: var(--darkTeal);
     transform: translateY(-3px);
     transition: color 1s ease-out;
@@ -105,12 +110,12 @@ section {
     
 }
 
-/* Subtitle floating within the image above */
+/* Subtitle floating within the image above it */
 #subtitle {
     /* Aesthetic~ */
     background: transparent;
     color: var(--sunset);
-    font-family: 'Lugrasimo', serif;
+    font-family: var(--lugrasimo);
     font-size: 35px;
     transform: rotateX(5deg);
     opacity: 0.5;
@@ -120,8 +125,10 @@ section {
     top: 220px;
 }
 
-/* Main section with Grid display, establishing columns here */
+/* Main section with Grid display, establishing columns and rows here */
 main {
+    /* Aesthetic~ */
+    background-color: var(--darkTeal);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(8, 1fr);
@@ -131,6 +138,7 @@ main {
 /*Setting minimum dimensions of each gridItem */
 .gridItem {
     min-height: 200px;
+    background-color: white;
     
 }
 
@@ -140,37 +148,30 @@ main {
 #contactMe {
     /* Aesthetic~ */
     color: var(--darkTeal);
-    background-image: var(--tealGradient);
+    background-image: var(--tealGradientRight);
 }
 
+/* Setting size of text blocks across the grid */
 #aboutMeContent {
     grid-column: 2 / -1;
 }
 
+/* Setting size of "Work" aside */
 #work {
-    grid-row: span 3;
+    grid-row: span 5;
 }
 
-#workItem1,
+/* Setting size of largest project card */
 .bigImage {
     grid-column: 2 / -1;
+    grid-row: 2 / 5;
+}
+/* Setting the size of the 4 smaller project cards */
+.smallImage {
+    grid-column: span 2;
 }
 
-#workItem2 {
 
-}
-
-#workItem3 {
-
-}
-
-#workItem4 {
-
-}
-
-#workItem5 {
-
-}
 
 /* Media Queries to make page responsive */
 
