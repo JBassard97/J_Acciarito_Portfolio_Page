@@ -58,29 +58,29 @@ header {
 }
 
 /* Positioning and styling unordered list of links */
-nav ul {
+nav #headerLinks {
     display: flex;
 }
 
 /* Styling links */
-li a {
+#headerLinks li a {
     /* Aesthetic~ */
     font-family: var(--oswald);
     font-weight: 500;
     font-size: 1.6rem;
     color: var(--lightTeal);
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration-color: var(--sunset);
     /* Positioning */
     display: inline-block;
     justify-self: space-around;
     margin-top: 5px;
     margin-right: 15px;
-    border-bottom-color: var(--lightTeal);
+    border-bottom: 2px solid var(--sunset);
 }
 
 /* Animation when hovering over the nav links. Snappy! */
-li a:hover {
+#headerLinks li a:hover {
     border-radius: 5px;
     background: var(--tealGradientTop);
     color: var(--darkTeal);
@@ -89,18 +89,19 @@ li a:hover {
     transition: color 1s ease-out;
     cursor: help;
     text-decoration: none;
+    border-bottom: none;
     
 }
 
 /* Changes color of the link when clicked. Satisfying! */
 li a:active {
     color: var(--sunset);
-    transition: linear;
+    transition: ease-out;
     font-weight: bolder;
     text-shadow: 
         0 0 1px white,
-        0 0 2px yellow,
-        0 0 3px goldenrod;
+        0 0 2px gold,
+        0 0 3px var(--sunset);
 }
 
 /* This section encompasses the large image and subtitle within */
@@ -143,8 +144,9 @@ main {
     /* Aesthetic~ */
     display: grid;
     /* Positioning */
+    margin-right: 2rem;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 0.4fr);
     row-gap: 1rem;
     column-gap: 2rem;
     
@@ -161,7 +163,7 @@ and giving a right border to each */
 #work,
 #contactMe {
     /* Aesthetic~ */
-    border-right: 4px solid var(--darkTeal);
+    border-right: 4px solid var(--sunset);
     border-radius: 5px 5px 5px 5px;
     font-family: var(--oswald);
     font-size: 25px;
@@ -169,26 +171,20 @@ and giving a right border to each */
     background-color: transparent;
     /* Positioning */
     justify-self: end;
+    position: relative;
 }
 
 /* Positioning the "About Me" and "Work" headers */
-.aboutMeHeader {
-    padding-right: 1.5rem;
-}
-
-.about {
-    padding-top: 10px;
-}
-
-#workHeader {
-    padding-top: 10px;
-    padding-right: 1.5rem;
-}
+#aboutMeHeader,
+#workHeader,
+#contactMeHeader {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}   
 
 /* Setting size of text blocks across the grid */
 #aboutMeContent {
     border-radius: 5px;
-    background-color: transparent;
     grid-column: 2 / -1;
 }
 
@@ -211,6 +207,7 @@ and giving a right border to each */
 .bigImage,
 .smallImage {
     border: 5px solid var(--darkTeal);
+    border-radius: 5px;
     position: relative;
 }
 
@@ -218,48 +215,61 @@ and giving a right border to each */
 .bigImage {
     grid-column: 2 / -1;
     grid-row: 2 / 5;
-    max-height: fit-content;
-    /* Setting inner display: flex so contents are responsive */
+    /* Setting display: flex so contents are responsive */
     display: flex;
     position: relative;
 }
 /* Setting the size of the 4 smaller project cards */
 .smallImage {
     grid-column: span 2;
+    display: flex;
 }
 
-/* Sizing largest image */
-#img1 {
-    max-width: 100%;
-    min-height: max-content;
+/* SUPER important, makes all image elements in the main to fill their divs cleanly */
+main img {
+    width: 100%;
+    height: 100%;
 }
 
 
-/* Styling and positioning descriptions in their cards */
+
+
+/* Styling and positioning all descriptions in their cards */
 .projDesc {
     /* Aesthetic~ */
     font-family: var(--oswald);
     color: var(--lightTeal);
     background-color: var(--darkTeal);
+    border-radius: 0px 5px 5px 0px;
     /* Positioning */
     position: absolute;
     bottom: 2rem;
+    padding: 6px 6px 6px 4px;
 }
 
-#workItem1{
-    
+/* Beginning of "Contact Me" section */
+/* Contact Me Header already styled earlier! */
+
+#contactMeContent {
+    grid-column: 2 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-#workItem1{
+#contactMeContent ul {
     display: flex;
 }
 
-#workItem1{
-    background-image: url()
+#contactMeContent ul li a {
+    border-bottom: 2px solid var(--sunset);
+    text-decoration: none;
+    color: var(--darkTeal);
+    font-family: var(--oswald);
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 3rem;
 }
-
-
-
 
 /* Media Queries to make page responsive */
 
@@ -279,17 +289,27 @@ and giving a right border to each */
     }
 
     .gridItem {
-        min-height: 100px;
+        min-height: 150px;
     }
-
+    
+    .smallImage {
+        
+    }
     #aboutMe,
-    #work {
+    #work,
+    #contactMe {
         /* Aesthetic~ */
         /* Changes vertical dividers to horizontal */
         border-right: none;
-        border-bottom: 5px solid var(--darkTeal);
+        border-bottom: 5px solid var(--sunset);
     }
+
+    #workHeader {
+    padding-top: 55px;        
+    }
+
 }
+
 
 /* Small smartphones */
 @media screen and (max-width: 576px) and (min-width: 320px){

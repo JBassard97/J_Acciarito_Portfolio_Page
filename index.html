@@ -19,7 +19,7 @@
     <header>
       <h1 id="headerName">J Acciarito's Coding Portfolio</h1>
       <nav>
-        <ul>
+        <ul id="headerLinks">
           <li><a href="#aboutMe">About Me</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#contactMe">Contact Me</a></li>
@@ -35,8 +35,10 @@
     <main>
       <!-- Beginning of About Me section -->
       <div id="aboutMe" class="gridItem">
-        <h1 class="aboutMeHeader about">About</h1>
-        <h1 class="aboutMeHeader">Me</h1>
+        <div id="aboutMeHeader">
+        <h1>About</h1>
+        <h1>Me</h1>
+        </div>
       </div>
       <div id="aboutMeContent" class="gridItem">
         <p>
@@ -59,52 +61,57 @@
       <!-- One large card -->
       <div class="bigImage gridItem">
         <div id="workItem1">
-            <img id="img1" src="./Assets/photos/prework-study-guide-img.png" />
-            <div class="projDesc">
-            <h3>Project</h3>
-            <p>Description</p>
-            </div>
+          <img src="./Assets/photos/prework-study-guide-img.png" />
+          <div class="projDesc">
+            <h3>Prework Study Guide</h3>
+            <p>Foray into HTML, CSS, and JS</p>
+          </div>
         </div>
       </div>
       <!-- Four smaller cards below -->
       <div id="workItem2" class="smallImage gridItem">
-        <img />
+        <img src="./Assets/photos/css-collection-img.png" />
         <div class="projDesc">
-          <h3>Project</h3>
-          <p>Description</p>
+          <h3>CSS Collection</h3>
+          <p>Styles I Like!</p>
         </div>
       </div>
       <div id="workItem3" class="smallImage gridItem">
-        <img />
+        <img src="./Assets/photos/MeTime-preview-img.png"  />
         <div class="projDesc">
-          <h3>Project</h3>
-          <p>Description</p>
+          <h3>Me Time</h3>
+          <p>Figuring it out</p>
         </div>
       </div>
       <div id="workItem4" class="smallImage gridItem">
-        <img />
+        <img src="./Assets/photos/Horiseon-preview-img.png" />
         <div class="projDesc">
-          <h3>Project</h3>
-          <p>Description</p>
+          <h3>Horiseon Landing Pg</h3>
+          <p>Exploring Accessibility</p>
         </div>
       </div>
       <div id="workItem5" class="smallImage gridItem">
-        <img />
+        <img src="./Assets/photos/CSSsnippets-preview-img.png"/>
         <div class="projDesc">
-          <h3>Project</h3>
-          <p>Description</p>
+          <h3>CSS Snippets</h3>
+          <p>Interactive Cheatsheet</p>
         </div>
       </div>
+      <!-- Beginning of Contact Me section -->
+      <div id="contactMe" class="gridItem">
+        <div id="contactMeHeader">
+        <h1>Contact</h1>
+        <h1>Me</h1>
+    </div>  
+    </div>
+    <div id="contactMeContent" class="gridItem">
+        <ul>
+            <li><a href="tel:8049711162">(804)-971-1162</a></li>
+            <li><a href="mailto:jonathanacciarito@gmail.com">Email</a></li>
+            <li><a href="https://github.com/JBassard97">GitHub</a></li>
+            <li><a href="https://open.spotify.com/user/31wwhnpntnm7fbmnhvpr5pqmzufa">Spotify</a></li>
+        </ul>
+      </div>
     </main>
-
-      <footer>
-        <h1>Contact Me:</h1>
-        <ul>
-          <li>Phone # (804)-971-1162</li>
-          <li>Email jonathanacciarito@gmail.com</li>
-          <li>Resume 📋</li>
-          <li>GitHub</li>
-        <ul>
- 
-        </body>
+  </body>
 </html>
