@@ -79,7 +79,7 @@ li a {
     border-bottom-color: var(--lightTeal);
 }
 
-/* Animation when hovering over the nav links */
+/* Animation when hovering over the nav links. Snappy! */
 li a:hover {
     border-radius: 5px;
     background: var(--tealGradientTop);
@@ -142,8 +142,9 @@ section {
 main {
     /* Aesthetic~ */
     display: grid;
+    /* Positioning */
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     row-gap: 1rem;
     column-gap: 2rem;
     
@@ -151,14 +152,16 @@ main {
 
 /*Setting minimum dimensions of each gridItem */
 .gridItem {
-    min-height: 200px;
+    min-height: 150px;
 }
 
-/* Styling each section header in main similarly and giving a right border to each */
+/* Styling each section header in main similarly 
+and giving a right border to each */
 #aboutMe,
-#work {
+#work,
+#contactMe {
     /* Aesthetic~ */
-    border-right: 5px solid var(--darkTeal);
+    border-right: 4px solid var(--darkTeal);
     border-radius: 5px 5px 5px 5px;
     font-family: var(--oswald);
     font-size: 25px;
@@ -168,19 +171,35 @@ main {
     justify-self: end;
 }
 
-/* Positioning the "About Me" header */
-#aboutMeHeader {
-    padding-top: 3rem;
-    padding-right: 1rem;
+/* Positioning the "About Me" and "Work" headers */
+.aboutMeHeader {
+    padding-right: 1.5rem;
+}
+
+.about {
+    padding-top: 10px;
+}
+
+#workHeader {
+    padding-top: 10px;
+    padding-right: 1.5rem;
 }
 
 /* Setting size of text blocks across the grid */
 #aboutMeContent {
     border-radius: 5px;
     background-color: transparent;
-    /* background-color: var(--lighterTeal); */
     grid-column: 2 / -1;
+}
 
+/* Styling the text in #aboutMeContent */
+#aboutMeContent p {
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: var(--oswald);
+    color: var(--darkTeal);
+    margin-top: 20px;
+    margin-left: 5px;
 }
 
 /* Setting size of "Work" aside */
@@ -188,27 +207,57 @@ main {
     grid-row: span 5;
 }
 
-/* Positioning the "Work" header */
-#workHeader {
-    padding-right: 1rem;
-    padding-top: 3rem;
-}
-
 /* Setting aesthetics~ of all cards in "work" section */
 .bigImage,
 .smallImage {
     border: 5px solid var(--darkTeal);
+    position: relative;
 }
 
 /* Setting size of largest project card */
 .bigImage {
     grid-column: 2 / -1;
     grid-row: 2 / 5;
+    max-height: fit-content;
+    /* Setting inner display: flex so contents are responsive */
+    display: flex;
+    position: relative;
 }
 /* Setting the size of the 4 smaller project cards */
 .smallImage {
     grid-column: span 2;
 }
+
+/* Sizing largest image */
+#img1 {
+    max-width: 100%;
+    min-height: max-content;
+}
+
+
+/* Styling and positioning descriptions in their cards */
+.projDesc {
+    /* Aesthetic~ */
+    font-family: var(--oswald);
+    color: var(--lightTeal);
+    background-color: var(--darkTeal);
+    /* Positioning */
+    position: absolute;
+    bottom: 2rem;
+}
+
+#workItem1{
+    
+}
+
+#workItem1{
+    display: flex;
+}
+
+#workItem1{
+    background-image: url()
+}
+
 
 
 
@@ -223,18 +272,32 @@ main {
 
 /* Large smartphones */
 @media screen and (max-width: 768px) {
-    body {
-        display: block;
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .gridItem {
+        min-height: 100px;
+    }
+
+    #aboutMe,
+    #work {
+        /* Aesthetic~ */
+        /* Changes vertical dividers to horizontal */
+        border-right: none;
+        border-bottom: 5px solid var(--darkTeal);
     }
 }
 
 /* Small smartphones */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) and (min-width: 320px){
     body {
-        display: block;
+        display: 
     }
 
     li a {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
