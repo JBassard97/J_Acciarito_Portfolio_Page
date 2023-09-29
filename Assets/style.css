@@ -117,8 +117,6 @@ section {
     max-height: 320px;
     margin-bottom: 1.5rem;
     box-shadow: 0px 6px 10px var(--sunset);
-    
-    
 }
 
 /* Subtitle floating within the image above it */
@@ -135,7 +133,14 @@ section {
     align-self: center;
     top: 220px;
 }
-
+ 
+/* Positions photo when page is at normal size */
+#profPhoto {
+    position: absolute;
+    top: 134px;
+    left: 15px;
+    border-radius: 20px;
+ }
 /* END OF HEADER */
 
 /* BEGINNING OF MAIN/ABOUT ME */
@@ -165,7 +170,6 @@ and giving a right border to each */
 #contactMe {
     /* Aesthetic~ */
     border-right: 4px solid var(--sunset);
-    border-radius: 5px 5px 5px 5px;
     font-family: var(--oswald);
     font-size: 25px;
     color: var(--darkTeal);
@@ -301,20 +305,25 @@ main ul li a:hover {
 /* Media Queries to make page responsive */
 
 /* Tablets */
-@media screen and (max-width: 992px) {
-    body {
-        
-    }
+@media screen and (min-width: 769px) {
+    
 }
 
 /* Large smartphones */
 @media screen and (max-width: 768px) {
-main {
+
+    main {
     display: flex;
     flex-direction: column;
     margin: 5px;
 }
-    /* Ensures every item (like text) is at least 75px. */
+    
+/* Hides photo upon viewport shrinkage */
+#profPhoto {  
+    position: initial;
+    margin-left: 80px;
+}
+/* Ensures every item (like text) is at least 75px. */
     .gridItem {
         min-height: 75px;
     }
@@ -364,14 +373,8 @@ main {
 
 /* Small smartphones */
 @media screen and (max-width: 576px) and (min-width: 324px){
-    main {
-            
-        }
-    
-    body {
-        display: 
-    }
 
+    /* shrinks font upon shrinkage */
     li a {
         font-size: 1.2rem;
     }
