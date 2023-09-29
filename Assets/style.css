@@ -1,166 +1,173 @@
 /* Establishing variables used throughout similarly styled items */
 :root {
-    /* Colors */
-    --sunset: rgb(172, 129, 50, 5);
-    --darkTeal: rgb(6, 55, 61);
-    --lightTeal: rgb(56, 177, 177);
-    --lighterTeal: rgb(109, 175, 175);
-    --tealGradientRight: linear-gradient(to right, var(--lighterTeal), var(--lightTeal), var(--darkTeal));
-    --tealGradientTop: linear-gradient(to top, var(--lighterTeal), var(--lightTeal), var(--darkTeal));
-    --tealGradientLeft: linear-gradient(to left, var(--lighterTeal), var(--lightTeal), var(--darkTeal));
-    /* Fonts */
-    --oswald: 'Oswald', Impact, 'Arial Narrow Bold', sans-serif;
-    --lugrasimo: 'Lugrasimo','Times New Roman', Times, serif;
+  /* Colors */
+  --sunset: rgb(172, 129, 50, 5);
+  --darkTeal: rgb(6, 55, 61);
+  --lightTeal: rgb(56, 177, 177);
+  --lighterTeal: rgb(109, 175, 175);
+  --tealGradientRight: linear-gradient(
+    to right,
+    var(--lighterTeal),
+    var(--lightTeal),
+    var(--darkTeal)
+  );
+  --tealGradientTop: linear-gradient(
+    to top,
+    var(--lighterTeal),
+    var(--lightTeal),
+    var(--darkTeal)
+  );
+  --tealGradientLeft: linear-gradient(
+    to left,
+    var(--lighterTeal),
+    var(--lightTeal),
+    var(--darkTeal)
+  );
+  /* Fonts */
+  --oswald: "Oswald", Impact, "Arial Narrow Bold", sans-serif;
+  --lugrasimo: "Lugrasimo", "Times New Roman", Times, serif;
 }
 
 /* Makes all elements predictably sized, across multiple browsers */
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 /* Giving entire page a base background-color of --lightTeal */
 body {
-    background-color: var(--lightTeal);
+  background-color: var(--lightTeal);
 }
 
 /* Header */
 header {
-    /* Aesthetic~ */
-    background-color: var(--darkTeal);
-    min-height: 65px;
-    /* Positioning */
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    
+  /* Aesthetic~ */
+  background-color: var(--darkTeal);
+  min-height: 65px;
+  /* Positioning */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 /* Aesthetic styling h1 in the header */
 #headerName {
-    /* Aesthetic~ */
-    font-family: var(--oswald);
-    font-size: 40px;
-    color: var(--darkTeal);
-    background: var(--tealGradientTop);
-    border-bottom-right-radius: 20px;
-    /* Positioning */
-    flex-wrap: wrap;
-    min-height: 60px;
-    padding: 10px 10px 10px 40px;
-    align-self: flex-start;
+  /* Aesthetic~ */
+  font-family: var(--oswald);
+  font-size: 40px;
+  color: var(--darkTeal);
+  background: var(--tealGradientTop);
+  border-bottom-right-radius: 20px;
+  /* Positioning */
+  flex-wrap: wrap;
+  min-height: 60px;
+  padding: 10px 10px 10px 40px;
+  align-self: flex-start;
 }
 
 /* Positioning and styling unordered list of links */
 nav #headerLinks {
-    display: flex;
+  display: flex;
 }
 
 /* Styling links */
 #headerLinks li a {
-    /* Aesthetic~ */
-    font-family: var(--oswald);
-    font-weight: 500;
-    font-size: 1.6rem;
-    color: var(--lightTeal);
-    text-decoration: none;
-    text-decoration-color: var(--sunset);
-    border-bottom: 2px solid var(--sunset);
-    /* Positioning */
-    display: inline-block;
-    justify-self: space-around;
-    margin-top: 5px;
-    margin-right: 15px;
-    
+  /* Aesthetic~ */
+  font-family: var(--oswald);
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--lightTeal);
+  text-decoration: none;
+  text-decoration-color: var(--sunset);
+  border-bottom: 2px solid var(--sunset);
+  /* Positioning */
+  display: inline-block;
+  justify-self: space-around;
+  margin-top: 5px;
+  margin-right: 15px;
 }
 
 /* Animation when hovering over the nav links. Snappy! */
 #headerLinks li a:hover {
-    border-radius: 5px;
-    background: var(--tealGradientTop);
-    color: var(--darkTeal);
-    box-shadow: 0px 6px 10px var(--sunset);
-    transform: translateY(-3px);
-    transition: color 1s ease-out;
-    cursor: help;
-    text-decoration: none;
-    border-bottom: none;
-    
+  border-radius: 5px;
+  background: var(--tealGradientTop);
+  color: var(--darkTeal);
+  box-shadow: 0px 6px 10px var(--sunset);
+  transform: translateY(-3px);
+  transition: color 1s ease-out;
+  cursor: help;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 /* Changes color of the link when clicked. Satisfying! */
 li a:active {
-    color: var(--sunset);
-    transition: ease-out;
-    font-weight: bolder;
-    text-shadow: 
-        0 0 1px white,
-        0 0 2px gold,
-        0 0 3px var(--sunset);
+  color: var(--sunset);
+  transition: ease-out;
+  font-weight: bolder;
+  text-shadow: 0 0 1px white, 0 0 2px gold, 0 0 3px var(--sunset);
 }
 
 /* This section encompasses the large image and subtitle within */
 section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Image below the Header */
 #headerImage {
-    min-width: 100%;
-    max-height: 320px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0px 6px 10px var(--sunset);
+  min-width: 100%;
+  max-height: 320px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 6px 10px var(--sunset);
 }
 
 /* Subtitle floating within the image above it */
 #subtitle {
-    /* Aesthetic~ */
-    background: transparent;
-    color: var(--sunset);
-    font-family: var(--lugrasimo);
-    font-size: 35px;
-    transform: rotateX(5deg);
-    opacity: 0.5;
-    /* Positioning to center of photo */
-    position: absolute;
-    align-self: center;
-    top: 220px;
+  /* Aesthetic~ */
+  background: transparent;
+  color: var(--sunset);
+  font-family: var(--lugrasimo);
+  font-size: 35px;
+  transform: rotateX(5deg);
+  opacity: 0.5;
+  /* Positioning to center of photo */
+  position: absolute;
+  align-self: center;
+  top: 220px;
 }
- 
+
 /* Positions photo when page is at normal size */
 #profPhoto {
-    position: absolute;
-    top: 134px;
-    left: 15px;
-    border-radius: 20px;
- }
+  position: absolute;
+  top: 134px;
+  left: 15px;
+  border-radius: 20px;
+}
 /* END OF HEADER */
 
 /* BEGINNING OF MAIN/ABOUT ME */
 
 /* Main section with Grid display, establishing columns and rows here */
 main {
-    /* Aesthetic~ */
-    display: grid;
-    /* Positioning */
-    margin-right: 2rem;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(7, 0.4fr);
-    row-gap: 1rem;
-    column-gap: 1rem;
-    
+  /* Aesthetic~ */
+  display: grid;
+  /* Positioning */
+  margin-right: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 0.4fr);
+  row-gap: 1rem;
+  column-gap: 1rem;
 }
 
 /*Setting minimum dimensions of each gridItem */
 .gridItem {
-    min-height: 150px;
+  min-height: 150px;
 }
 
 /* Styling each section header in main similarly 
@@ -168,214 +175,213 @@ and giving a right border to each */
 #aboutMe,
 #work,
 #contactMe {
-    /* Aesthetic~ */
-    border-right: 4px solid var(--sunset);
-    font-family: var(--oswald);
-    font-size: 25px;
-    color: var(--darkTeal);
-    background-color: transparent;
-    /* Positioning */
-    justify-self: end;
-    position: relative;
+  /* Aesthetic~ */
+  border-right: 4px solid var(--sunset);
+  font-family: var(--oswald);
+  font-size: 25px;
+  color: var(--darkTeal);
+  background-color: transparent;
+  /* Positioning */
+  justify-self: end;
+  position: relative;
 }
 
 /* Positioning the "About Me" and "Work" headers */
 #aboutMeHeader,
 #workHeader,
 #contactMeHeader {
-    margin-right: 10px;
-    margin-bottom: 10px;
-    flex: 0 1 141px;
-}   
+  margin-right: 10px;
+  margin-bottom: 10px;
+  flex: 0 1 141px;
+}
 
 /* Aligns the "Me"s in About and Contact Me to the right */
 .me {
-    text-align: end;
+  text-align: end;
 }
 
 /* Setting size of text blocks across the grid */
 #aboutMeContent {
-    border-radius: 5px;
-    grid-column: 2 / -1;
+  border-radius: 5px;
+  grid-column: 2 / -1;
 }
 
 /* Styling the text in #aboutMeContent */
 #aboutMeContent p {
-    font-weight: bold;
-    font-size: 1rem;
-    font-family: var(--oswald);
-    color: var(--darkTeal);
-    margin-top: 20px;
-    margin-left: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: var(--oswald);
+  color: var(--darkTeal);
+  margin-top: 20px;
+  margin-left: 5px;
 }
 
 /* BEGINNING OF WORK SECTION */
 
 /* Setting size of "Work" aside */
 #work {
-    grid-row: span 5;
+  grid-row: span 5;
 }
 
 /* Setting inner positioning of all cards in "work" section */
 .bigImage,
 .smallImage {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
 
 /* Setting size of largest project card */
 .bigImage {
-    grid-column: 2 / -1;
-    grid-row: 2 / 5;
+  grid-column: 2 / -1;
+  grid-row: 2 / 5;
 }
 
 /* Setting the size of the 4 smaller project cards */
 .smallImage {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 /* SUPER important, makes all image elements in the main to fill their divs cleanly */
 main img {
-    width: 100%;
-    height: 100%;
-    border: 5px solid var(--darkTeal);
-    border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid var(--darkTeal);
+  border-radius: 5px;
 }
 
 /* Keeps behavior mentioned above, now with links anchored in images*/
 main a {
-    width: 100%;
-    height: 100%;  
-/* All things anchored start opaque and transition when hovered over */
-    opacity: 50%;
+  width: 100%;
+  height: 100%;
+  /* All things anchored start opaque and transition when hovered over */
+  opacity: 50%;
 }
 
 /* Changes opacity of the cards when hovered over */
 main img:hover,
 main a:hover {
-    opacity: 100%;
-    transition: 0.25s ease-in-out;
-    box-shadow: 0px 0px 2px 4px var(--sunset);
-    border-radius: 5px;
+  opacity: 100%;
+  transition: 0.25s ease-in-out;
+  box-shadow: 0px 0px 2px 4px var(--sunset);
+  border-radius: 5px;
 }
 
 /* Prevents contact links from repeating above hover effects */
 main ul li a:hover {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 /* Styling and positioning all descriptions in their cards */
 .projDesc {
-    /* Aesthetic~ */
-    font-size: 20px;
-    font-family: var(--oswald);
-    color: var(--lightTeal);
-    background-color: var(--darkTeal);
-    border-radius: 0px 5px 5px 0px;
-    /* Positioning */
-    position: absolute;
-    bottom: 2rem;
-    padding: 6px 6px 6px 4px;
+  /* Aesthetic~ */
+  font-size: 20px;
+  font-family: var(--oswald);
+  color: var(--lightTeal);
+  background-color: var(--darkTeal);
+  border-radius: 0px 5px 5px 0px;
+  /* Positioning */
+  position: absolute;
+  bottom: 2rem;
+  padding: 6px 6px 6px 4px;
 }
 
 /* Beginning of "Contact Me" section */
 /* Contact Me Header already styled earlier! */
 
+/* Setting size of contact list section on the grid */
 #contactMeContent {
-    grid-column: 2 / -1;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  grid-column: 2 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
+/* Making links display in a row */
 #contactMeContent ul {
-    display: flex;
+  display: flex;
 }
 
 #contactMeContent ul li a {
-    border-bottom: 2px solid var(--sunset);
-    text-decoration: none;
-    color: var(--darkTeal);
-    font-family: var(--oswald);
-    font-size: 25px;
-    font-weight: bold;
-    margin-right: 3rem;
+  border-bottom: 2px solid var(--sunset);
+  text-decoration: none;
+  color: var(--darkTeal);
+  font-family: var(--oswald);
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 3rem;
 }
 
 /* Media Queries to make page responsive */
 
 /* Tablets */
 @media screen and (min-width: 769px) {
-    
 }
 
 /* Large smartphones */
 @media screen and (max-width: 768px) {
-
-    main {
+  main {
     display: flex;
     flex-direction: column;
     margin: 5px;
-}
-    
-/* Hides photo upon viewport shrinkage */
-#profPhoto {  
+  }
+
+  /* Hides photo upon viewport shrinkage */
+  #profPhoto {
     position: initial;
     margin-left: 80px;
-}
-/* Ensures every item (like text) is at least 75px. */
-    .gridItem {
-        min-height: 75px;
-    }
+  }
+  /* Ensures every item (like text) is at least 75px. */
+  .gridItem {
+    min-height: 75px;
+  }
 
-    /* Declaring how big the largest image has to stay upon shrinkage */
-    #img1 {
-        min-height: 275px;
-    }
+  /* Declaring how big the largest image has to stay upon shrinkage */
+  #img1 {
+    min-height: 275px;
+  }
 
-    /* Makes smaller cards roughly half the height of the largest card */
-    #img2,
-    #img3,
-    #img4,
-    #img5 {
-        max-height: 150px;
-    }
-    
-    /* Pushes the "Me" back to the left, below About or Contact */
-    .me {
-        text-align: start;
-    }
-    
-    #aboutMe,
-    #work,
-    #contactMe {
-        /* Aesthetic~ */
-        /* Changes vertical dividers to horizontal */
-        border-right: none;
-        border-bottom: 5px solid var(--sunset);
-    }
+  /* Makes smaller cards roughly half the height of the largest card */
+  #img2,
+  #img3,
+  #img4,
+  #img5 {
+    max-height: 150px;
+  }
 
-    /* Pushes "Work" down a little when page shrinks */
-    #workHeader {
-    padding-top: 55px;        
-    }
+  /* Pushes the "Me" back to the left, below About or Contact */
+  .me {
+    text-align: start;
+  }
 
-    /* Pushing up unordered list, and resizing font for responsiveness */
-    #contactMeContent {
-        align-items: flex-start;
-    }
+  #aboutMe,
+  #work,
+  #contactMe {
+    /* Aesthetic~ */
+    /* Changes vertical dividers to horizontal */
+    border-right: none;
+    border-bottom: 5px solid var(--sunset);
+  }
 
-    #contactMeContent ul li a {
+  /* Pushes "Work" down a little when page shrinks */
+  #workHeader {
+    padding-top: 55px;
+  }
+
+  /* Pushing up unordered list, and resizing font for responsiveness */
+  #contactMeContent {
+    align-items: flex-start;
+  }
+
+  #contactMeContent ul li a {
     font-size: 1.2rem;
     margin: 5px;
-}
+  }
 }
 
 /* Small smartphones */
-@media screen and (max-width: 576px) and (min-width: 324px){
-
-    /* shrinks font upon shrinkage */
-    li a {
-        font-size: 1.2rem;
-    }
+@media screen and (max-width: 576px) and (min-width: 324px) {
+  /* shrinks font upon shrinkage */
+  li a {
+    font-size: 1.2rem;
+  }
 }
